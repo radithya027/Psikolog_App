@@ -18,6 +18,27 @@ dependencies:
   flutter_svg: ^2.0.10+1
   linear_progress_bar: ^1.1.2
   flutter_otp_text_field: ^1.2.0
+  iconsax_plus: ^1.0.0
+  dotted_line: ^3.2.3
+  intl: ^0.19.0
+  loading_animation_widget: ^1.3.0
+  get_storage: ^2.1.1
+  shared_preferences: ^2.3.2
+  image_picker: ^1.1.2
+  url_launcher: ^6.3.1
+  connectivity_plus: ^6.1.0
+  firebase_core: ^3.8.0
+  firebase_messaging: ^15.1.5
+  flutter_local_notifications: ^18.0.1
+  flutter_chat_types: ^3.6.2
+  flutter_chat_ui: ^1.6.15
+  auto_scroll: ^0.2.0
+  chatview: ^2.3.0
+  dash_chat_2: ^0.0.21
+  animated_custom_dropdown: ^3.1.1
+  another_flutter_splash_screen: ^1.2.1
+  lottie: ^3.1.3
+  card_loading: ^0.3.2
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +53,27 @@ flutter:
     - lib/infrastructure/assets/clap_9971688.png
     - lib/infrastructure/assets/speech-bubble_2598981.png
     - lib/infrastructure/assets/lock_4822441.png
+    - lib/infrastructure/assets/9774848.jpg
+    - lib/infrastructure/assets/bd3b342734eb1e97fc24b60f3af5097c.jpg
+    - lib/infrastructure/assets/a5344d13c7a12e7f2eb80ea871d73b17.jpg
+    - lib/infrastructure/assets/866e472584a91ce6b6f9f24a966f1057.jpg
+    - lib/infrastructure/assets/icons8-school-100.png
+    - lib/infrastructure/assets/icons8-hospital-100.png
+    - lib/infrastructure/assets/icons8-indonesia-48.png
+    - lib/infrastructure/assets/icons8-document-100.png
+    - lib/infrastructure/assets/icons8-date-100.png
+    - lib/infrastructure/assets/icons8-chat-100.png
+    - lib/infrastructure/assets/icons8-discount-100.png
+    - lib/infrastructure/assets/GoPay_logo_vector__svg__eps__formats_free_download_-_Brandlogos_net-removebg-preview.png
+    - lib/infrastructure/assets/3024051-removebg-preview.png
+    - lib/infrastructure/assets/icons8-wallet-48.png
+    - lib/infrastructure/assets/icons8-location-48.png
+    - lib/infrastructure/assets/icons8-book-48.png
+    - lib/infrastructure/assets/icons8-add-48.png
+    - lib/infrastructure/assets/icons8-realtime-64 (1).png
+    - lib/infrastructure/assets/icons8-circled-3-64.png
+    - lib/infrastructure/assets/icons8-circled-7-100.png
+    - lib/infrastructure/assets/icons8-1-64.png
+    - lib/infrastructure/assets/icons8-log-out-100.png
+    - lib/infrastructure/lottie/Animation - 1732000208498.json
+    - lib/infrastructure/lottie/Animation - 1732001792674.json

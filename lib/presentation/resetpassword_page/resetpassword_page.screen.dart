@@ -59,15 +59,15 @@ class ResetpasswordPageScreen extends GetView<ResetpasswordPageController> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CustomTextFormField(
-                              isPassword: true,
-                              labelText: "Masukkan password baru",
-                            ),
+                            // CustomTextFormField(
+                            //   isPassword: true,
+                            //   labelText: "Masukkan password baru",
+                            // ),
                             const SizedBox(height: 20),
-                            CustomTextFormField(
-                              isPassword: true,
-                              labelText: "Konfrimasi password baru anda",
-                            ),
+                            // CustomTextFormField(
+                            //   isPassword: true,
+                            //   labelText: "Konfrimasi password baru anda",
+                            // ),
                           ],
                         ),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // Import this for input formatters
 import 'package:psikolog_app/infrastructure/theme/theme.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -6,10 +7,17 @@ class CustomTextFormField extends StatefulWidget {
     super.key,
     required this.labelText,
     this.isPassword = false,
+    this.isNumeric = false,
+    required this.controller,
+    this.onChanged,
   });
 
   final String labelText;
   final bool isPassword;
+  final TextEditingController controller;
+  final bool isNumeric;
+
+  final ValueChanged<String>? onChanged;
 
   @override
   _CustomTextFormFieldState createState() => _CustomTextFormFieldState();
@@ -17,15 +25,19 @@ class CustomTextFormField extends StatefulWidget {
 
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
   bool _isPasswordVisible = false;
-  final TextEditingController _localController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: _localController,
+      controller: widget.controller, // Use the passed controller here
       obscureText: widget.isPassword && !_isPasswordVisible,
       maxLines: widget.isPassword ? 1 : null,
       style: AppTextStyle.tsBodyRegular(AppColor.black),
+      keyboardType:
+          widget.isNumeric ? TextInputType.number : TextInputType.text,
+      inputFormatters: widget.isNumeric
+          ? [FilteringTextInputFormatter.digitsOnly]
+          : null, // Apply only for numeric input
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
           vertical: MediaQuery.of(context).size.height * 0.02,
@@ -62,6 +74,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         labelText: widget.labelText,
         labelStyle: AppTextStyle.tsSmallRegular(AppColor.black),
       ),
+      onChanged: widget.onChanged,
     );
   }
 }
