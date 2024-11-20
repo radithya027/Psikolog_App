@@ -60,18 +60,19 @@ class RegisterPageScreen extends GetView<RegisterPageController> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CustomTextFormField(
-                              labelText: "Masukkan email anda",
-                            ),
+                            // CustomTextFormField(
+                            //   labelText: "Masukkan email anda",
+                            // ),
                             const SizedBox(height: 20),
-                            CustomTextFormField(
-                              labelText: "Masukkan Nomer telepon anda",
-                            ),
+                            // CustomTextFormField(
+                            //   labelText: "Masukkan Nomer telepon anda",
+                            //   isNumeric: true,  
+                            // ),
                             const SizedBox(height: 20),
-                            CustomTextFormField(
-                              isPassword: true,
-                              labelText: "Masukkan password anda",
-                            ),
+                            // CustomTextFormField(
+                            //   isPassword: true,
+                            //   labelText: "Masukkan password anda",
+                            // ),
                           ],
                         ),
                       ),

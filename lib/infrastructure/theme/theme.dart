@@ -26,7 +26,8 @@ class AppColor {
   static const Color grey = Color.fromRGBO(234, 239, 245, 1);
   static const Color white = Color(0xffFEFEFE);
   static const Color background = Color(0xffFAFAFA);
-  static const Color txtcolor = Color.fromRGBO(42,78,202, 1);
+  static const Color txtcolor = Color.fromRGBO(42, 78, 202, 1);
+  static const Color txtfield = Color.fromRGBO(248, 249, 254, 1);
 }
 
 figmaFontsize(int fontSize) {

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:psikolog_app/infrastructure/navigation/routes.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:psikolog_app/infrastructure/theme/theme.dart';
+import 'package:psikolog_app/presentation/login_page/controllers/login_page.controller.dart';
 
 import 'component/customtextfield.dart';
-import 'controllers/login_page.controller.dart';
 
 class LoginPageScreen extends GetView<LoginPageController> {
   const LoginPageScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,80 +59,42 @@ class LoginPageScreen extends GetView<LoginPageController> {
                         margin:
                             EdgeInsets.symmetric(vertical: heightScreen * 0.02),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment
-                              .start, // Mengatur alignment ke kiri
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CustomTextFormField(
-                              labelText: "Masukkan email anda",
-                            ),
-                            const SizedBox(height: 20),
-                            CustomTextFormField(
-                              isPassword: true,
-                              labelText: "Masukkan password anda",
-                            ),
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: TextButton(
-                                onPressed: () {
-                                  Get.toNamed(Routes.FORGOT_PASSWORD_PAGE);
-                                },
-                                child: Text(
-                                  "Forgot Password?",
-                                  style: TextStyle(
-                                    color: AppColor.txtcolor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
+                              labelText: "Masukkan Nomor Telepon Anda",
+                              controller: controller.phoneController,
+                            )
                           ],
                         ),
                       ),
                       spaceHeightLarge,
-                      SizedBox(
-                        width: double.infinity,
-                        child: MaterialButton(
-                          minWidth: double.infinity,
-                          height: 50,
-                          onPressed: () {},
-                          color: AppColor.button,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                          ),
-                          elevation: 0,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Log In",
-                                  style:
-                                      AppTextStyle.tsSmallBold(AppColor.white)),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text("Don't have an account? ",
-                                style: AppTextStyle.tsSmallRegular(
-                                    AppColor.black)),
-                            TextButton(
-                                onPressed: () {
-                                  Get.toNamed(Routes.REGISTER_PAGE);
-                                },
-                                child: Text(
-                                  "Register",
-                                  style: TextStyle(
-                                    color: AppColor.txtcolor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )),
-                          ],
-                        ),
-                      ),
+                      Obx(() => SizedBox(
+                            width: double.infinity,
+                            child: MaterialButton(
+                              minWidth: double.infinity,
+                              height: 50,
+                              onPressed: () {
+                                if (!controller.loading.value) {
+                                  controller.login();
+                                }
+                              },
+                              color: AppColor.button,
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12)),
+                              ),
+                              elevation: 0,
+                              child: controller.loading.value
+                                  ? LoadingAnimationWidget.inkDrop(
+                                      color: AppColor.white,
+                                      size: 24,
+                                    )
+                                  : Text("Log In",
+                                      style: AppTextStyle.tsSmallBold(
+                                          AppColor.white)),
+                            ),
+                          ))
                     ],
                   ),
                 ),

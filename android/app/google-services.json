@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530369236673",
+    "project_id": "psikolog-app-b481c",
+    "storage_bucket": "psikolog-app-b481c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530369236673:android:b87f4d2b7f129af40f8e40",
+        "android_client_info": {
+          "package_name": "com.psikolog_app.psikolog_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAcS5bKiye96gMXBB-wgzrNaKu5DJI9Z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

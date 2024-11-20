@@ -48,61 +48,61 @@ class ForgotPasswordPageScreen extends GetView<ForgotPasswordPageController> {
                   ),
                 ),
                 defaultHeightSpace,
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: heightScreen * 0.02),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Lupa Password',
-                        style: AppTextStyle.tsBigTitleBold(AppColor.txtcolor),
-                      ),
-                      Text(
-                        'Selamat datang di Psikolog',
-                        style: AppTextStyle.tsBodyRegular(AppColor.black),
-                      ),
-                      spaceHeightLarge,
-                      Container(
-                        margin:
-                            EdgeInsets.symmetric(vertical: heightScreen * 0.02),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment
-                              .start, // Mengatur alignment ke kiri
-                          children: [
-                            CustomTextFormField(
-                              labelText: "Masukkan email anda",
-                            ),
-                          ],
-                        ),
-                      ),
-                      spaceHeightLarge,
-                      SizedBox(
-                        width: double.infinity,
-                        child: MaterialButton(
-                          minWidth: double.infinity,
-                          height: 50,
-                          onPressed: () {
-                            Get.toNamed(Routes.OTP_PAGE);
-                          },
-                          color: AppColor.button,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                          ),
-                          elevation: 0,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Lanjut",
-                                  style:
-                                      AppTextStyle.tsSmallBold(AppColor.white)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: EdgeInsets.symmetric(vertical: heightScreen * 0.02),
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.start,
+                //     crossAxisAlignment: CrossAxisAlignment.center,
+                //     children: [
+                //       Text(
+                //         'Lupa Password',
+                //         style: AppTextStyle.tsBigTitleBold(AppColor.txtcolor),
+                //       ),
+                //       Text(
+                //         'Selamat datang di Psikolog',
+                //         style: AppTextStyle.tsBodyRegular(AppColor.black),
+                //       ),
+                //       spaceHeightLarge,
+                //       Container(
+                //         margin:
+                //             EdgeInsets.symmetric(vertical: heightScreen * 0.02),
+                //         child: Column(
+                //           crossAxisAlignment: CrossAxisAlignment
+                //               .start, // Mengatur alignment ke kiri
+                //           children: [
+                //             CustomTextFormField(
+                //               labelText: "Masukkan email anda",
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //       spaceHeightLarge,
+                //       SizedBox(
+                //         width: double.infinity,
+                //         child: MaterialButton(
+                //           minWidth: double.infinity,
+                //           height: 50,
+                //           onPressed: () {
+                //             Get.toNamed(Routes.OTP_PAGE);
+                //           },
+                //           color: AppColor.button,
+                //           shape: RoundedRectangleBorder(
+                //             borderRadius: BorderRadius.all(Radius.circular(12)),
+                //           ),
+                //           elevation: 0,
+                //           child: Row(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Text("Lanjut",
+                //                   style:
+                //                       AppTextStyle.tsSmallBold(AppColor.white)),
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
           ),
